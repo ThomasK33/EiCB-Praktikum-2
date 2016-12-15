@@ -1,0 +1,97 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.TypeError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.checkType(ContextualAnalysis.java:92)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:175)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Type error @ val MATRIX&lt;INT&gt; [1][3] a = [[3], [3], [3]]; in line 2, column 4: 
+MATRIX&lt;INT&gt; [1][3] does not match MATRIX&lt;INT&gt; [3][1]</message>
+    <errorOccur class="valDef">
+      <srcLine>2</srcLine>
+      <srcColumn>4</srcColumn>
+      <type class="matrixType">
+        <elemType class="intType"/>
+        <xDim>1</xDim>
+        <yDim>3</yDim>
+      </type>
+      <name>a</name>
+      <value class="structInit">
+        <srcLine>2</srcLine>
+        <srcColumn>30</srcColumn>
+        <type class="matrixType">
+          <elemType class="intType" reference="../../../type/elemType"/>
+          <xDim>3</xDim>
+          <yDim>1</yDim>
+        </type>
+        <elements class="linked-list">
+          <structInit>
+            <srcLine>2</srcLine>
+            <srcColumn>31</srcColumn>
+            <type class="vectorType">
+              <elemType class="intType" reference="../../../../../type/elemType"/>
+              <dim>1</dim>
+            </type>
+            <elements class="linked-list">
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>32</srcColumn>
+                <val>3</val>
+              </intVal>
+            </elements>
+          </structInit>
+          <structInit>
+            <srcLine>2</srcLine>
+            <srcColumn>36</srcColumn>
+            <type class="vectorType">
+              <elemType class="intType" reference="../../../../../type/elemType"/>
+              <dim>1</dim>
+            </type>
+            <elements class="linked-list">
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>37</srcColumn>
+                <val>3</val>
+              </intVal>
+            </elements>
+          </structInit>
+          <structInit>
+            <srcLine>2</srcLine>
+            <srcColumn>41</srcColumn>
+            <type class="vectorType">
+              <elemType class="intType" reference="../../../../../type/elemType"/>
+              <dim>1</dim>
+            </type>
+            <elements class="linked-list">
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>42</srcColumn>
+                <val>3</val>
+              </intVal>
+            </elements>
+          </structInit>
+        </elements>
+      </value>
+    </errorOccur>
+    <t1 class="matrixType" reference="../errorOccur/type"/>
+    <t2 class="matrixType" reference="../errorOccur/value/type"/>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>matrix02.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

@@ -1,0 +1,38 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.OverwritingDeclarationError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.Scope.addIdentifier(Scope.java:47)</trace>
+      <trace>mavlc.context_analysis.IdentificationTable.addIdentifier(IdentificationTable.java:21)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitDeclaration(ContextualAnalysis.java:166)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitDeclaration(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.visitor.ASTNodeBaseVisitor.visitVariableDeclaration(ASTNodeBaseVisitor.java:104)</trace>
+      <trace>mavlc.ast.nodes.statement.VariableDeclaration.accept(VariableDeclaration.java:49)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>x has already been declared and cannot be overwritten in this scope.
+ Previous declaration: var INT x; in line 2, column 4</message>
+    <prevDecl class="varDecl">
+      <srcLine>2</srcLine>
+      <srcColumn>4</srcColumn>
+      <type class="intType"/>
+      <name>x</name>
+    </prevDecl>
+    <declName>x</declName>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>assign03.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

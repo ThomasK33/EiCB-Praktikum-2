@@ -1,0 +1,150 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.TypeError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.checkType(ContextualAnalysis.java:92)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:415)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitSubtraction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.expression.Subtraction.accept(Subtraction.java:45)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:174)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Type error @ a - b in line 7, column 30: 
+VECTOR &lt;INT&gt; [3] does not match MATRIX&lt;INT&gt; [3][1]</message>
+    <errorOccur class="subtraction">
+      <srcLine>7</srcLine>
+      <srcColumn>30</srcColumn>
+      <leftOp class="idRef">
+        <srcLine>7</srcLine>
+        <srcColumn>30</srcColumn>
+        <type class="vectorType">
+          <elemType class="intType"/>
+          <dim>3</dim>
+        </type>
+        <declaration class="valDef">
+          <srcLine>2</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="vectorType" reference="../../type"/>
+          <name>a</name>
+          <value class="structInit">
+            <srcLine>2</srcLine>
+            <srcColumn>27</srcColumn>
+            <type class="vectorType">
+              <elemType class="intType" reference="../../../../type/elemType"/>
+              <dim>3</dim>
+            </type>
+            <elements class="linked-list">
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>28</srcColumn>
+                <val>3</val>
+              </intVal>
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>31</srcColumn>
+                <val>3</val>
+              </intVal>
+              <intVal>
+                <srcLine>2</srcLine>
+                <srcColumn>34</srcColumn>
+                <val>3</val>
+              </intVal>
+            </elements>
+          </value>
+        </declaration>
+        <idName>a</idName>
+      </leftOp>
+      <rightOp class="idRef">
+        <srcLine>7</srcLine>
+        <srcColumn>34</srcColumn>
+        <type class="matrixType">
+          <elemType class="intType" reference="../../../leftOp/type/elemType"/>
+          <xDim>3</xDim>
+          <yDim>1</yDim>
+        </type>
+        <declaration class="valDef">
+          <srcLine>3</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="matrixType" reference="../../type"/>
+          <name>b</name>
+          <value class="structInit">
+            <srcLine>3</srcLine>
+            <srcColumn>30</srcColumn>
+            <type class="matrixType">
+              <elemType class="intType" reference="../../../../../leftOp/type/elemType"/>
+              <xDim>3</xDim>
+              <yDim>1</yDim>
+            </type>
+            <elements class="linked-list">
+              <structInit>
+                <srcLine>3</srcLine>
+                <srcColumn>31</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../../leftOp/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>3</srcLine>
+                    <srcColumn>32</srcColumn>
+                    <val>1</val>
+                  </intVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>4</srcLine>
+                <srcColumn>31</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../../leftOp/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>4</srcLine>
+                    <srcColumn>32</srcColumn>
+                    <val>1</val>
+                  </intVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>5</srcLine>
+                <srcColumn>31</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../../leftOp/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>5</srcLine>
+                    <srcColumn>32</srcColumn>
+                    <val>1</val>
+                  </intVal>
+                </elements>
+              </structInit>
+            </elements>
+          </value>
+        </declaration>
+        <idName>b</idName>
+      </rightOp>
+    </errorOccur>
+    <t1 class="vectorType" reference="../errorOccur/leftOp/type"/>
+    <t2 class="matrixType" reference="../errorOccur/rightOp/type"/>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>subaddmul03.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

@@ -1,0 +1,100 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.ConstantAssignmentError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitForLoop(ContextualAnalysis.java:236)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitForLoop(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.ForLoop.accept(ForLoop.java:129)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Error @ for (counter = 0; counter &lt; 10; i = i + 1){
+i = i + 1;
+}
+in line 6, column 4: 
+Cannot assign to constant value!</message>
+    <ref class="forLoop">
+      <srcLine>6</srcLine>
+      <srcColumn>4</srcColumn>
+      <initVarName>counter</initVarName>
+      <initValue class="intVal">
+        <srcLine>6</srcLine>
+        <srcColumn>19</srcColumn>
+        <val>0</val>
+      </initValue>
+      <check class="compare">
+        <srcLine>6</srcLine>
+        <srcColumn>22</srcColumn>
+        <leftOp class="idRef">
+          <srcLine>6</srcLine>
+          <srcColumn>22</srcColumn>
+          <idName>counter</idName>
+        </leftOp>
+        <rightOp class="intVal">
+          <srcLine>6</srcLine>
+          <srcColumn>32</srcColumn>
+          <val>10</val>
+        </rightOp>
+        <comparator>LESS</comparator>
+      </check>
+      <incrVarName>i</incrVarName>
+      <incrExpr class="addition">
+        <srcLine>6</srcLine>
+        <srcColumn>40</srcColumn>
+        <leftOp class="idRef">
+          <srcLine>6</srcLine>
+          <srcColumn>40</srcColumn>
+          <idName>i</idName>
+        </leftOp>
+        <rightOp class="intVal">
+          <srcLine>6</srcLine>
+          <srcColumn>44</srcColumn>
+          <val>1</val>
+        </rightOp>
+      </incrExpr>
+      <body class="compoundStmt">
+        <srcLine>6</srcLine>
+        <srcColumn>47</srcColumn>
+        <statements>
+          <varAssign>
+            <srcLine>7</srcLine>
+            <srcColumn>8</srcColumn>
+            <identifier>
+              <srcLine>7</srcLine>
+              <srcColumn>8</srcColumn>
+              <name>i</name>
+            </identifier>
+            <value class="addition">
+              <srcLine>7</srcLine>
+              <srcColumn>12</srcColumn>
+              <leftOp class="idRef">
+                <srcLine>7</srcLine>
+                <srcColumn>12</srcColumn>
+                <idName>i</idName>
+              </leftOp>
+              <rightOp class="intVal">
+                <srcLine>7</srcLine>
+                <srcColumn>16</srcColumn>
+                <val>1</val>
+              </rightOp>
+            </value>
+          </varAssign>
+        </statements>
+      </body>
+    </ref>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>forloop03.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

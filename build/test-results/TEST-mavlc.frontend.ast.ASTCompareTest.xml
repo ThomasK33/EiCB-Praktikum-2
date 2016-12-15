@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mavlc.frontend.ast.ASTCompareTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-12-15T00:41:53" hostname="localhost" time="0.706">
+  <properties/>
+  <testcase name="testExample[assign01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.345"/>
+  <testcase name="testExample[compound01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.061"/>
+  <testcase name="testExample[compound02]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.059"/>
+  <testcase name="testExample[compound03]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.058"/>
+  <testcase name="testExample[forloop01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.056"/>
+  <testcase name="testExample[matrix01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.072"/>
+  <testcase name="testExample[subaddmul01]" classname="mavlc.frontend.ast.ASTCompareTest" time="0.053"/>
+  <system-out><![CDATA[[src/test/testcases/trees/P2/public/assign01.ast_test.context.xml, src/test/testcases/trees/P2/public/compound01.ast_test.context.xml, src/test/testcases/trees/P2/public/compound02.ast_test.context.xml, src/test/testcases/trees/P2/public/compound03.ast_test.context.xml, src/test/testcases/trees/P2/public/forloop01.ast_test.context.xml, src/test/testcases/trees/P2/public/matrix01.ast_test.context.xml, src/test/testcases/trees/P2/public/subaddmul01.ast_test.context.xml]
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/assign01.mavl
+Writing output of contextual analysis to build/test-output/assign01.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/compound01.mavl
+Writing output of contextual analysis to build/test-output/compound01.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/compound02.mavl
+Writing output of contextual analysis to build/test-output/compound02.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/compound03.mavl
+Writing output of contextual analysis to build/test-output/compound03.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/forloop01.mavl
+TYPE mavlc.ast.nodes.expression.Addition@9d580a2c
+Writing output of contextual analysis to build/test-output/forloop01.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/matrix01.mavl
+Writing output of contextual analysis to build/test-output/matrix01.mavl.test.xml
+Done.
+Compiling file /Users/thomas/Uni/eicb-p2-2016.1/src/test/testcases/trees/P2/public/subaddmul01.mavl
+Writing output of contextual analysis to build/test-output/subaddmul01.mavl.test.xml
+Done.
+]]></system-out>
+  <system-err><![CDATA[Running testcase assign01.mavl
+-->Successful
+Running testcase compound01.mavl
+-->Successful
+Running testcase compound02.mavl
+-->Successful
+Running testcase compound03.mavl
+-->Successful
+Running testcase forloop01.mavl
+-->Successful
+Running testcase matrix01.mavl
+-->Successful
+Running testcase subaddmul01.mavl
+-->Successful
+]]></system-err>
+</testsuite>

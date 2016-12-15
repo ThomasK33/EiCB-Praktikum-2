@@ -1,0 +1,164 @@
+<mavlc.test__wrapper.ASTTestWrapper>
+  <srcLine>-1</srcLine>
+  <srcColumn>-1</srcColumn>
+  <AST>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <function>
+      <srcLine>1</srcLine>
+      <srcColumn>0</srcColumn>
+      <name>main</name>
+      <returnType class="voidType"/>
+      <parameters/>
+      <functionBody>
+        <valDef>
+          <srcLine>2</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType"/>
+            <xDim>1</xDim>
+            <yDim>3</yDim>
+          </type>
+          <name>a</name>
+          <value class="structInit">
+            <srcLine>2</srcLine>
+            <srcColumn>30</srcColumn>
+            <type class="matrixType">
+              <elemType class="intType" reference="../../../type/elemType"/>
+              <xDim>1</xDim>
+              <yDim>3</yDim>
+            </type>
+            <elements class="linked-list">
+              <structInit>
+                <srcLine>2</srcLine>
+                <srcColumn>32</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../type/elemType"/>
+                  <dim>3</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>33</srcColumn>
+                    <val>4</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>36</srcColumn>
+                    <val>4</val>
+                  </intVal>
+                  <intVal>
+                    <srcLine>2</srcLine>
+                    <srcColumn>39</srcColumn>
+                    <val>4</val>
+                  </intVal>
+                </elements>
+              </structInit>
+            </elements>
+          </value>
+        </valDef>
+        <valDef>
+          <srcLine>3</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType" reference="../../../valDef/type/elemType"/>
+            <xDim>3</xDim>
+            <yDim>1</yDim>
+          </type>
+          <name>b</name>
+          <value class="structInit">
+            <srcLine>3</srcLine>
+            <srcColumn>30</srcColumn>
+            <type class="matrixType">
+              <elemType class="intType" reference="../../../../valDef/type/elemType"/>
+              <xDim>3</xDim>
+              <yDim>1</yDim>
+            </type>
+            <elements class="linked-list">
+              <structInit>
+                <srcLine>3</srcLine>
+                <srcColumn>32</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../valDef/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>3</srcLine>
+                    <srcColumn>33</srcColumn>
+                    <val>3</val>
+                  </intVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>3</srcLine>
+                <srcColumn>37</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../valDef/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>3</srcLine>
+                    <srcColumn>38</srcColumn>
+                    <val>3</val>
+                  </intVal>
+                </elements>
+              </structInit>
+              <structInit>
+                <srcLine>3</srcLine>
+                <srcColumn>42</srcColumn>
+                <type class="vectorType">
+                  <elemType class="intType" reference="../../../../../../valDef/type/elemType"/>
+                  <dim>1</dim>
+                </type>
+                <elements class="linked-list">
+                  <intVal>
+                    <srcLine>3</srcLine>
+                    <srcColumn>43</srcColumn>
+                    <val>3</val>
+                  </intVal>
+                </elements>
+              </structInit>
+            </elements>
+          </value>
+        </valDef>
+        <valDef>
+          <srcLine>5</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="matrixType">
+            <elemType class="intType" reference="../../../valDef/type/elemType"/>
+            <xDim>1</xDim>
+            <yDim>1</yDim>
+          </type>
+          <name>ab</name>
+          <value class="matrixMul">
+            <srcLine>5</srcLine>
+            <srcColumn>31</srcColumn>
+            <type class="matrixType">
+              <elemType class="intType" reference="../../../../valDef/type/elemType"/>
+              <xDim>1</xDim>
+              <yDim>1</yDim>
+            </type>
+            <leftOp class="idRef">
+              <srcLine>5</srcLine>
+              <srcColumn>31</srcColumn>
+              <type class="matrixType" reference="../../../../valDef/type"/>
+              <declaration class="valDef" reference="../../../../valDef"/>
+              <idName>a</idName>
+            </leftOp>
+            <rightOp class="idRef">
+              <srcLine>5</srcLine>
+              <srcColumn>35</srcColumn>
+              <type class="matrixType" reference="../../../../valDef[2]/type"/>
+              <declaration class="valDef" reference="../../../../valDef[2]"/>
+              <idName>b</idName>
+            </rightOp>
+          </value>
+        </valDef>
+      </functionBody>
+    </function>
+  </AST>
+  <testFile>matrix01.mavl</testFile>
+  <onlySyntax>false</onlySyntax>
+</mavlc.test__wrapper.ASTTestWrapper>

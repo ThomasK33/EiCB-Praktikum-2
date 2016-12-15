@@ -1,0 +1,6 @@
+function void main(){
+    var int x;
+    
+    // redefinition
+    var int x;
+}

@@ -1,0 +1,121 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <varDecl>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>i</name>
+      </varDecl>
+      <varDecl>
+        <srcLine>3</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType" reference="../../varDecl/type"/>
+        <name>counter</name>
+      </varDecl>
+      <varAssign>
+        <srcLine>4</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>4</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>i</name>
+          <declaration class="varDecl" reference="../../../varDecl"/>
+        </identifier>
+        <value class="intVal">
+          <srcLine>4</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>0</val>
+        </value>
+      </varAssign>
+      <forLoop>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <initVarName>counter</initVarName>
+        <initVarDecl class="varDecl" reference="../../varDecl[2]"/>
+        <initValue class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>19</srcColumn>
+          <val>0</val>
+        </initValue>
+        <check class="compare">
+          <srcLine>5</srcLine>
+          <srcColumn>22</srcColumn>
+          <type class="boolType"/>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>22</srcColumn>
+            <type class="intType" reference="../../../../varDecl/type"/>
+            <declaration class="varDecl" reference="../../../../varDecl[2]"/>
+            <idName>counter</idName>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>32</srcColumn>
+            <val>10</val>
+          </rightOp>
+          <comparator>LESS</comparator>
+        </check>
+        <incrVarName>counter</incrVarName>
+        <incrVarDecl class="varDecl" reference="../../varDecl[2]"/>
+        <incrExpr class="addition">
+          <srcLine>5</srcLine>
+          <srcColumn>46</srcColumn>
+          <type class="intType" reference="../../../varDecl/type"/>
+          <leftOp class="idRef">
+            <srcLine>5</srcLine>
+            <srcColumn>46</srcColumn>
+            <type class="intType" reference="../../../../varDecl/type"/>
+            <declaration class="varDecl" reference="../../../../varDecl[2]"/>
+            <idName>counter</idName>
+          </leftOp>
+          <rightOp class="intVal">
+            <srcLine>5</srcLine>
+            <srcColumn>56</srcColumn>
+            <val>1</val>
+          </rightOp>
+        </incrExpr>
+        <body class="compoundStmt">
+          <srcLine>5</srcLine>
+          <srcColumn>59</srcColumn>
+          <statements>
+            <varAssign>
+              <srcLine>6</srcLine>
+              <srcColumn>8</srcColumn>
+              <identifier>
+                <srcLine>6</srcLine>
+                <srcColumn>8</srcColumn>
+                <name>i</name>
+                <declaration class="varDecl" reference="../../../../../../varDecl"/>
+              </identifier>
+              <value class="addition">
+                <srcLine>6</srcLine>
+                <srcColumn>12</srcColumn>
+                <type class="intType" reference="../../../../../../varDecl/type"/>
+                <leftOp class="idRef">
+                  <srcLine>6</srcLine>
+                  <srcColumn>12</srcColumn>
+                  <type class="intType" reference="../../../../../../../varDecl/type"/>
+                  <declaration class="varDecl" reference="../../../../../../../varDecl"/>
+                  <idName>i</idName>
+                </leftOp>
+                <rightOp class="intVal">
+                  <srcLine>6</srcLine>
+                  <srcColumn>16</srcColumn>
+                  <val>1</val>
+                </rightOp>
+              </value>
+            </varAssign>
+          </statements>
+        </body>
+      </forLoop>
+    </functionBody>
+  </function>
+</module>

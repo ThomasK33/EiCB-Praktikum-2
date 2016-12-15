@@ -1,0 +1,32 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.UndeclaredReferenceError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ModuleEnvironment.getFunctionDeclaration(ModuleEnvironment.java:60)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitCallExpression(ContextualAnalysis.java:538)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitCallExpression(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.expression.CallExpression.accept(CallExpression.java:91)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitCallStatement(ContextualAnalysis.java:278)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitCallStatement(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.CallStatement.accept(CallStatement.java:47)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Identifier bar has not been declared!</message>
+    <ref>bar</ref>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>call02.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

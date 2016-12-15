@@ -1,0 +1,36 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.ConstantAssignmentError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitLeftHandIdentifier(ContextualAnalysis.java:191)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitLeftHandIdentifier(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.LeftHandIdentifier.accept(LeftHandIdentifier.java:44)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:182)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitVariableAssignment(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.VariableAssignment.accept(VariableAssignment.java:51)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Error @ xin line 5, column 4: 
+Cannot assign to constant value!</message>
+    <ref class="lhsId">
+      <srcLine>5</srcLine>
+      <srcColumn>4</srcColumn>
+      <name>x</name>
+    </ref>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>assign02.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

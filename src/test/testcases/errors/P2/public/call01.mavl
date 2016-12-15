@@ -1,0 +1,12 @@
+function void main(){
+    foo();
+}
+
+function void foo(){
+    // Return type error
+    val int baz = bar();
+}
+
+function float bar(){
+  return 42.0;
+}

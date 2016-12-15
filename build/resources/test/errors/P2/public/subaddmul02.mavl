@@ -1,0 +1,8 @@
+function void main(){
+    val float a = 3.0;
+    val int b = 4;
+    val int c = 5;
+    
+    //typeerror 
+    val int x = a * (b + c);
+}

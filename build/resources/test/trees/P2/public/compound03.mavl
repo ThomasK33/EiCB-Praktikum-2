@@ -1,0 +1,20 @@
+function void main(){
+    var int x;
+    var int y;
+
+    x = 10;
+
+    {
+        val int x = 33;
+        y = x;
+    }
+
+    {
+        val int y = 33;
+        x = y;
+    }
+
+    {
+        y = x;
+    }
+}

@@ -1,0 +1,7 @@
+function void main(){
+    val int a = 3;
+    val int b = 4;
+    val int c = 5;
+
+    val int x = a * b + c - a;
+}

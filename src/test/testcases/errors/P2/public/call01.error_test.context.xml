@@ -1,0 +1,44 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.TypeError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.checkType(ContextualAnalysis.java:92)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:175)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Type error @ val INT baz = bar(); in line 7, column 4: 
+INT does not match FLOAT</message>
+    <errorOccur class="valDef">
+      <srcLine>7</srcLine>
+      <srcColumn>4</srcColumn>
+      <type class="intType"/>
+      <name>baz</name>
+      <value class="callExpr">
+        <srcLine>7</srcLine>
+        <srcColumn>18</srcColumn>
+        <type class="floatType"/>
+        <name>bar</name>
+        <actualParameters/>
+      </value>
+    </errorOccur>
+    <t1 class="intType" reference="../errorOccur/type"/>
+    <t2 class="floatType" reference="../errorOccur/value/type"/>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>call01.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

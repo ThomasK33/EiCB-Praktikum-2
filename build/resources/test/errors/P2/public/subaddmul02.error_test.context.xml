@@ -1,0 +1,95 @@
+<mavlc.test__wrapper.ErrorTestWrapper>
+  <stackTrace>
+    <trace>mavlc.Main.main(Main.java:231)</trace>
+  </stackTrace>
+  <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+    <c class="list"/>
+    <list reference="../c"/>
+  </suppressedExceptions>
+  <error class="mavlc.error_reporting.TypeError">
+    <stackTrace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.checkType(ContextualAnalysis.java:92)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitScalarArithmeticExpression(ContextualAnalysis.java:444)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitMultiplication(ContextualAnalysis.java:382)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitMultiplication(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.expression.Multiplication.accept(Multiplication.java:46)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:174)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitValueDefinition(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.statement.ValueDefinition.accept(ValueDefinition.java:57)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:146)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitFunction(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.function.Function.accept(Function.java:71)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:101)</trace>
+      <trace>mavlc.context_analysis.ContextualAnalysis.visitModule(ContextualAnalysis.java:77)</trace>
+      <trace>mavlc.ast.nodes.module.Module.accept(Module.java:44)</trace>
+      <trace>mavlc.Main.main(Main.java:226)</trace>
+    </stackTrace>
+    <suppressedExceptions class="java.util.Collections$UnmodifiableRandomAccessList" reference="../../suppressedExceptions"/>
+    <message>Type error @ a * b + c in line 7, column 16: 
+FLOAT does not match INT</message>
+    <errorOccur class="multiplication">
+      <srcLine>7</srcLine>
+      <srcColumn>16</srcColumn>
+      <leftOp class="idRef">
+        <srcLine>7</srcLine>
+        <srcColumn>16</srcColumn>
+        <type class="floatType"/>
+        <declaration class="valDef">
+          <srcLine>2</srcLine>
+          <srcColumn>4</srcColumn>
+          <type class="floatType" reference="../../type"/>
+          <name>a</name>
+          <value class="floatVal">
+            <srcLine>2</srcLine>
+            <srcColumn>18</srcColumn>
+            <val>3.0</val>
+          </value>
+        </declaration>
+        <idName>a</idName>
+      </leftOp>
+      <rightOp class="addition">
+        <srcLine>7</srcLine>
+        <srcColumn>21</srcColumn>
+        <type class="intType"/>
+        <leftOp class="idRef">
+          <srcLine>7</srcLine>
+          <srcColumn>21</srcColumn>
+          <type class="intType" reference="../../type"/>
+          <declaration class="valDef">
+            <srcLine>3</srcLine>
+            <srcColumn>4</srcColumn>
+            <type class="intType" reference="../../../type"/>
+            <name>b</name>
+            <value class="intVal">
+              <srcLine>3</srcLine>
+              <srcColumn>16</srcColumn>
+              <val>4</val>
+            </value>
+          </declaration>
+          <idName>b</idName>
+        </leftOp>
+        <rightOp class="idRef">
+          <srcLine>7</srcLine>
+          <srcColumn>25</srcColumn>
+          <type class="intType" reference="../../type"/>
+          <declaration class="valDef">
+            <srcLine>4</srcLine>
+            <srcColumn>4</srcColumn>
+            <type class="intType" reference="../../../type"/>
+            <name>c</name>
+            <value class="intVal">
+              <srcLine>4</srcLine>
+              <srcColumn>16</srcColumn>
+              <val>5</val>
+            </value>
+          </declaration>
+          <idName>c</idName>
+        </rightOp>
+      </rightOp>
+    </errorOccur>
+    <t1 class="floatType" reference="../errorOccur/leftOp/type"/>
+    <t2 class="intType" reference="../errorOccur/rightOp/type"/>
+  </error>
+  <onlySyntax>false</onlySyntax>
+  <testFile>subaddmul02.mavl</testFile>
+</mavlc.test__wrapper.ErrorTestWrapper>

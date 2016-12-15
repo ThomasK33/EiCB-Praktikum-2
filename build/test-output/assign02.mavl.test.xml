@@ -1,0 +1,39 @@
+<module>
+  <srcLine>1</srcLine>
+  <srcColumn>0</srcColumn>
+  <function>
+    <srcLine>1</srcLine>
+    <srcColumn>0</srcColumn>
+    <name>main</name>
+    <returnType class="voidType"/>
+    <parameters/>
+    <functionBody>
+      <valDef>
+        <srcLine>2</srcLine>
+        <srcColumn>4</srcColumn>
+        <type class="intType"/>
+        <name>x</name>
+        <value class="intVal">
+          <srcLine>2</srcLine>
+          <srcColumn>16</srcColumn>
+          <val>22</val>
+        </value>
+      </valDef>
+      <varAssign>
+        <srcLine>5</srcLine>
+        <srcColumn>4</srcColumn>
+        <identifier>
+          <srcLine>5</srcLine>
+          <srcColumn>4</srcColumn>
+          <name>x</name>
+          <declaration class="valDef" reference="../../../valDef"/>
+        </identifier>
+        <value class="intVal">
+          <srcLine>5</srcLine>
+          <srcColumn>8</srcColumn>
+          <val>33</val>
+        </value>
+      </varAssign>
+    </functionBody>
+  </function>
+</module>

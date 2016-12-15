@@ -1,0 +1,9 @@
+function void main(){
+    var int i;
+    // const init
+    val int counter = 0;
+    i = 0;
+    for (counter = 0; counter < 10; i = i + 1) {
+        i = i + 1;
+    }
+}
